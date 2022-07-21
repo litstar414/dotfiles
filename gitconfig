@@ -1,0 +1,45 @@
+# global gitconfig configuration
+
+[include]
+  path = ~/.gitconfig.local
+
+[alias]
+  graph = log --all --graph --decorate --oneline
+	lol = log --decorate --oneline --graph --all
+  # Show the diff between the latest commit and the current state.
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+[color]
+  ui = auto
+
+[core]
+  # Treat spaces before tabs and all kinds of trailing whitespace as an error.
+	# [default] trailing-space: looks for spaces at the end of a line
+	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	# Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
+
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+
+[help]
+	# Automatically correct and execute mistyped commands.
+	autocorrect = 1
