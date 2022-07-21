@@ -24,6 +24,10 @@
     ~/.gitconfig:
       relink: true
       path: gitconfig
+    ~/.config/fish/functions/fish_prompt.fish:
+      relink: true
+      create: true
+      path: fish_prompt.fish
 
 - create:
     - ~/.vim/undodir
