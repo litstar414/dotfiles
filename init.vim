@@ -3,6 +3,8 @@ set nocompatible
 set ignorecase
 set smartcase
 set noerrorbells
+set undofile
+set undodir="~/.vim/undodir/"
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 set expandtab

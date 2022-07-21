@@ -1,0 +1,32 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim/init.vim:
+      relink: true
+      path: init.vim
+      create: true
+    ~/.tmux.conf: tmux.conf
+    ~/.editorconfig:
+      path: editorconfig
+      relink: true
+    ~/.config/fish/aliases.fish:
+      relink: true
+      path: aliases.fish
+      create: true
+    ~/.config/fish/config.fish:
+      relink: true
+      path: config.fish
+      create: true
+    ~/.gitconfig:
+      relink: true
+      path: gitconfig
+
+- create:
+    - ~/.vim/undodir
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
