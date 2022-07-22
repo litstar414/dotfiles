@@ -8,6 +8,7 @@
 	lol = log --decorate --oneline --graph --all
   # Show the diff between the latest commit and the current state.
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+  root = rev-parse --show-toplevel
 [color]
   ui = auto
 

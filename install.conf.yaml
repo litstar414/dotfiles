@@ -24,14 +24,13 @@
     ~/.gitconfig:
       relink: true
       path: gitconfig
-    ~/.config/fish/functions/fish_prompt.fish:
-      relink: true
+    ~/.config/fish/functions/:
+      path: fish_functions/*
       create: true
-      path: fish_prompt.fish
+      glob: true
 
 - create:
     - ~/.vim/undodir
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [sudo apt-get install tmux, Install tmux]
